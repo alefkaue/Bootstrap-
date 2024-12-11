@@ -1,0 +1,282 @@
+/* =======================
+   1. FONTES E TIPOGRAFIA
+   ======================= */
+   body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* =======================
+   2. NAVEGAÇÃO (NAVBAR)
+   ======================= */
+.navbar {
+    background-color: #8B0000 !important; /* Vermelho escuro */
+}
+
+.navbar-brand img {
+    height: 40px; /* Reduzindo o tamanho da logo */
+}
+
+.nav-link, .navbar-toggler-icon {
+    color: #ffffff !important; /* Cor branca para o texto */
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Estilo de destaque para a opção ativa */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important; /* Mantém a cor original sem mudar no hover */
+}
+
+/* =======================
+   3. CARROSSEL E VÍDEO
+   ======================= */
+.carousel-inner img {
+    width: 100%;
+    height: 100%; /* Garantindo que a imagem ocupe toda a área do carrossel */
+}
+
+.carousel-caption {
+    padding: 15px;
+}
+
+/* Estilo para vídeo */
+video {
+    width: 100%;
+    height: 80vh; /* Reduzindo a altura para 80% da altura da tela */
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* Overlay ajustado para cobrir apenas o vídeo */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Garantindo que o overlay cubra toda a altura do vídeo */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Logo centralizada sobre o vídeo */
+.logo-center {
+    position: absolute;
+    top: 50%; /* Posiciona verticalmente no meio */
+    left: 50%; /* Posiciona horizontalmente no meio */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    width: 200px; /* Ajuste de tamanho da logo, se necessário */
+    z-index: 2; /* Garante que a logo apareça sobre o vídeo */
+}
+
+/* =======================
+   4. CARDS E ELEMENTOS DE DESTAQUE
+   ======================= */
+.card {
+    border: none;
+    transition: transform 0.3s ease; /* Transição para o efeito de hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+.card img {
+    max-height: 200px; /* Limite de altura para as imagens dos carros */
+    object-fit: cover; /* Garantir que a imagem cubra a área do card */
+}
+
+.card-title {
+    color: #8B0000; /* Cor do título do card */
+}
+
+.card-text {
+    color: #333; /* Cor do texto do card */
+}
+
+/* =======================
+   5. RODAPÉ (FOOTER)
+   ======================= */
+footer {
+    background-color: #333;
+    color: #FFD700; /* Cor do texto no rodapé */
+    padding: 20px 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-contact {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+footer .footer-contact a {
+    color: #FFD700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-contact a:hover {
+    color: #ff4500;
+}
+
+footer .footer-contact i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+footer .footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+footer .footer-social a {
+    color: #FFD700;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+footer .footer-social a:hover {
+    color: #ff4500;
+}
+
+/* Garantir que os itens estejam no canto certo */
+footer .footer-contact {
+    order: -1; /* Coloca os contatos à esquerda */
+}
+
+footer .footer-social {
+    order: 1; /* Coloca as redes sociais à direita */
+}
+
+footer .footer-logo img {
+    width: 150px; /* Ajuste de tamanho da logo no footer */
+    height: auto; /* Manter a proporção da imagem */
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   6. RESPONSIVIDADE
+   ======================= */
+
+/* Pequenas telas (smartphones) */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 35px; /* Logo menor em dispositivos móveis */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Fontes menores para links na navbar */
+    }
+
+    .carousel-caption {
+        font-size: 16px; /* Fonte menor para legenda no carrossel */
+    }
+
+    .card-title {
+        font-size: 14px; /* Ajusta o tamanho do título dos cards */
+    }
+
+    .card-text {
+        font-size: 12px; /* Ajuste no texto dos cards */
+    }
+
+    video {
+        height: 60vh; /* Ajuste a altura do vídeo em telas pequenas */
+    }
+
+    .overlay {
+        height: 60vh; /* Menor altura do overlay em dispositivos móveis */
+    }
+
+    .logo-center {
+        width: 150px; /* Logo menor em telas pequenas */
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-brand img {
+        height: 40px; /* Logo ajustada para tablets */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Fontes um pouco maiores para links na navbar */
+    }
+
+    .carousel-caption {
+        font-size: 18px; /* Fonte média para legenda no carrossel */
+    }
+
+    .card-title {
+        font-size: 16px; /* Ajuste no tamanho do título dos cards */
+    }
+
+    .card-text {
+        font-size: 14px; /* Ajuste no texto dos cards */
+    }
+
+    video {
+        height: 70vh; /* Ajuste a altura do vídeo para tablets */
+    }
+
+    .overlay {
+        height: 70vh; /* Ajuste do overlay para tablets */
+    }
+
+    .logo-center {
+        width: 180px; /* Logo um pouco maior para tablets */
+    }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 769px) {
+    .navbar-brand img {
+        height: 45px; /* Logo ajustada para desktops */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px; /* Fontes maiores para links na navbar */
+    }
+
+    .carousel-caption {
+        font-size: 20px; /* Fonte maior para legenda no carrossel */
+    }
+
+    .card-title {
+        font-size: 18px; /* Títulos maiores nos cards */
+    }
+
+    .card-text {
+        font-size: 16px; /* Ajuste no texto dos cards */
+    }
+
+    video {
+        height: 80vh; /* Altura padrão do vídeo para desktops */
+    }
+
+    .overlay {
+        height: 80vh; /* Overlay com altura padrão em telas grandes */
+    }
+
+    .logo-center {
+        width: 200px; /* Logo padrão para desktops */
+    }
+}
